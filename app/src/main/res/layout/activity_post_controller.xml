@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue2"
+    tools:context=".Post">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeBack"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/darkBlue2">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_arrow_back_black_24dp"
+            android:layout_margin="10dp"
+            style="?android:attr/borderlessButtonStyle" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add new post"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/addNewPostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="post"
+            android:layout_alignParentRight="true"
+            android:background="@color/darkBlue2"
+            android:textColor="@color/lightBlue"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontalLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/uploadImagesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="ADD IMAGES"
+                android:textSize="20dp"
+                android:background="@drawable/roundbutton"/>
+
+            <TextView
+                android:id="@+id/mCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadImagesBtn"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:text="CATEGORY" />
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mCategory"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:id="@+id/mTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categorySpinner"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="25dp"
+                android:text="TITLE" />
+            <EditText
+                android:id="@+id/postTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/mLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postTitle"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="25dp"
+                android:text="LOCATION"/>
+
+            <EditText
+                android:id="@+id/postLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mLocation"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/mSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postLocation"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="25dp"
+                android:text="CONDITION"/>
+
+            <Spinner
+                android:id="@+id/conditionSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mSpinner"
+                android:tooltipText="Stanje "
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:id="@+id/mPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/conditionSpinner"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="25dp"
+                android:text="PRICE"/>
+            <EditText
+                android:id="@+id/postPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mPrice"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:maxLines="1"
+                android:hint="0,00HRK"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/mDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/postPrice"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:layout_marginLeft="25dp"
+                android:text="DESCRIPTION"/>
+            <EditText
+                android:id="@+id/postDesc"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_below="@id/mDesc"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="top|left"
+                android:maxLines="6"
+                android:hint="..."
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+
+
+            <Button
+                android:id="@+id/postBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/postDesc"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="Post"
+                android:textSize="18dp"
+                android:background="@drawable/roundbutton"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

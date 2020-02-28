@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="3dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagePost"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/darkBlue2" />
+
+        <TextView
+            android:id="@+id/dateView"
+            android:paddingLeft="5dp"
+            android:hint="1.1.2020"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/naslovView"
+            android:hint="Naslov"
+            android:paddingLeft="5dp"
+            android:textColor="@color/lightBlue"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateView"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/opisView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/naslovView"
+            android:maxLines="2"
+            android:textSize="18dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:hint="Opis"
+            android:textColor="@color/dark" />
+
+        <TextView
+            android:id="@+id/cijenaView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/opisView"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-1dp"
+            android:hint="Cijena"
+            android:paddingLeft="5dp"
+            android:textColor="@color/dark"
+            android:textSize="18dp" />
+
+        
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

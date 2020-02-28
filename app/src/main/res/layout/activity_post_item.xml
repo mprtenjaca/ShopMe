@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostItemActivity"
+    android:id="@+id/tes"
+    android:background="#D3D3D3">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/darkBlue"
+            />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">-
+
+            <RelativeLayout
+                android:id="@+id/basicInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFF">
+                <TextView
+                    android:id="@+id/naslovOglasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#000"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/cijenaOglasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PRICE"
+                    android:textStyle="bold"
+                    android:layout_below="@id/naslovOglasa"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Basic informations"
+                    android:textColor="#000"
+                    android:layout_below="@id/cijenaOglasa"
+                    android:layout_marginTop="30dp"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:id="@+id/loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:layout_below="@id/info"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:id="@+id/lokacijaOglasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/info"
+                    android:hint="Zadar"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/conditionHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Condition:"
+                    android:layout_below="@id/loc"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:id="@+id/contitionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/lokacijaOglasa"
+                    android:hint="NOVO"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/categoryHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category:"
+                    android:layout_below="@id/conditionHeading"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:id="@+id/categoryValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@id/contitionValue"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/moreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_margin="5dp"
+                android:layout_below="@id/basicInfo">
+
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="More information"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="15dp"/>
+
+                <TextView
+                    android:id="@+id/opisOglasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/more"
+                    android:hint="Description"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="18dp"
+                    android:textColor="#000"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/postInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/moreLayout">
+
+                <TextView
+                    android:id="@+id/anchor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/idAnchor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post ID:"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/anchor"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/idOglasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="ID"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/anchor"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/dateAnchor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of post:"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/idAnchor"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/datumOglasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="1.1.2020."
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/idOglasa"
+                    android:textSize="16dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/postInfoLayout">
+
+                <TextView
+                    android:id="@+id/usernameOglas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="username"
+                    android:textSize="20dp"
+                    android:textColor="@color/lightBlue"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

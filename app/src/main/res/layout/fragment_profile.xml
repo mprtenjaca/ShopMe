@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativePersonal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/editeBlue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="PROFILE"
+            android:textColor="@color/white"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/white"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_account_circle_black_24dp"
+            android:clickable="true"/>
+
+
+        <TextView
+            android:id="@+id/imeIprezimeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_below="@id/imageView"
+            android:hint="Ime i prezime"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/usernameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_below="@id/imeIprezimeView"
+            android:hint="username"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/editProfile"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/usernameView"
+            android:background="@drawable/edit"
+            android:textColor="@color/lightBlue"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/emailView"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/relativePersonal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="EMAIL"
+            android:textColor="@color/black"/>
+
+
+        <Button
+            android:id="@+id/myPostsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:layout_below="@id/emailView"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:text="@string/moji_oglasi"/>
+
+
+
+        <Button
+            android:id="@+id/logOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/myPostsBtn"
+            android:layout_centerInParent="true"
+            android:paddingLeft="20dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:textAllCaps="false"
+            android:text="LOG OUT" />
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/postBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_margin="5dp"
+        android:paddingLeft="14dp"
+        android:background="@drawable/roundbutton"
+        android:text="+"
+        android:textSize="40dp"/>
+
+
+</RelativeLayout>

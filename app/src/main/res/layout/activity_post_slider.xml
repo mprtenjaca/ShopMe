@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue2">
+
+    <RelativeLayout
+        android:id="@+id/relativeBack"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/darkBlue2">
+
+        <Button
+            android:id="@+id/backPost"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_arrow_back_black_24dp"
+            android:layout_margin="10dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="backToProfile"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Next"
+            android:layout_alignParentRight="true"
+            android:background="@color/darkBlue2"
+            android:textColor="@color/lightBlue"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeBack"
+        android:layout_marginTop="5dp">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#D3D3D3"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#D3D3D3"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#D3D3D3"/>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="#D3D3D3"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
